@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 15px; font-family: Arial, sans-serif; }
+    h3 { margin-top: 0; color: #1e40af; }
+    input { width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; margin: 6px 0; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    #save { background: #3b82f6; color: white; }
+    #restore { background: #10b981; color: white; }
+    #upgradeBtn { background: #f59e0b; color: white; margin-top: 15px; }
+    #sessions { margin: 15px 0; max-height: 200px; overflow-y: auto; }
+    .session { background: #f9fafb; border: 1px solid #e5e7eb; padding: 10px; margin: 8px 0; border-radius: 6px; }
+    .session-btn { padding: 5px 10px; margin: 3px; font-size: 12px; }
+    .free-limit { color: #ef4444; font-size: 12px; margin: 5px 0; }
+    .pro-features { font-size: 11px; color: #6b7280; margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h3>📑 TabSaver Pro</h3>
+  <input type="text" id="sessionName" placeholder="Enter session name">
+  
+  <button id="save">💾 Save Current Tabs</button>
+  <button id="restore">📂 Restore Last Session</button>
+  
+  <div id="sessions">
+    <h4 style="margin: 10px 0 5px 0;">Saved Sessions:</h4>
+  </div>
+  
+  <div style="border-top: 1px solid #e5e7eb; padding-top: 15px;">
+    <p style="margin: 0 0 8px 0;"><strong>Free Plan:</strong> 3 sessions max</p>
+    <button id="upgradeBtn">UPGRADE TO PRO - $3/month</button>
+    <p class="pro-features">Unlimited sessions • Cloud sync • Export</p>
+    <p id="freeLimit" class="free-limit"></p>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
